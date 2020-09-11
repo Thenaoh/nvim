@@ -14,7 +14,7 @@ set relativenumber
 set mouse=a
 set smartindent
 syntax on
-set clipboard+=unnamedplus
+
 set autoindent
 set tabstop=4
 
@@ -39,9 +39,21 @@ nnoremap ML	<C-w>l<C-w>l
 
 "回到行首
 nnoremap <C-i> 0
+
 "回到行尾
 nnoremap ; $
+vnoremap ; $
 
+
+"可视化模式下粘贴部分文本
+"neovim没有与系统剪贴板交互的功能，可下载一个软件
+"如sudo pacman -S xsel,然后重启neovim
+
+vnoremap <C-c>	"+y
+"复制内容
+
+vnoremap <C-v>	"+p
+"粘贴内容
 
 nnoremap d; d$
 nnoremap ,; :vertical resize-5<ESC>
