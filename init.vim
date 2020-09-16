@@ -52,8 +52,11 @@ vnoremap ; $
 vnoremap <C-c>	"+y
 "复制内容
 
-vnoremap <C-v>	"+p
+nnoremap <C-v>	"+p
 "粘贴内容
+
+
+
 
 nnoremap d; d$
 nnoremap ,; :vertical resize-5<ESC>
@@ -126,6 +129,7 @@ vnoremap j h
 
 call plug#begin('~/.vim/plugged')
 "Plug 'ycm-core/YouCompleteMe'		"vim下代码补全插件
+"Plug 'itchyny/calendar.vim'			"显示时间,日历
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }	"fzf for nvim/vim
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-gruvbox8'		"vim主题
@@ -135,9 +139,9 @@ Plug 'preservim/nerdtree'			"文件树显示
 Plug 'voldikss/vim-floaterm'		"浮动终端
 Plug 'majutsushi/tagbar'			"显示文件函数信息
 Plug 'junegunn/goyo.vim'			"vim沉浸式体验
-Plug 'itchyny/calendar.vim'			"显示时间,日历
 Plug 'neoclide/coc.nvim', {'branch': 'release'}	"neovim下代码补全插件
-Plug 'vim-airline/vim-airline-themes'	"底部状态栏主题
+Plug 'vim-airline/vim-airline-themes' "底部状态栏主题
+Plug 'tpope/vim-surround'			"操作配对符号
 call plug#end()
 
 colorscheme  gruvbox8
