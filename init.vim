@@ -5,6 +5,7 @@
 " |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "                                    
 " 
+"
 set nu
 set cursorline 
 set incsearch
@@ -55,9 +56,9 @@ vnoremap <C-c>	"+y
 nnoremap <C-p>	"+p
 "粘贴内容
 
-
-
-
+let g:python_host_prog = '/usr/bin/python2.7'
+let g:python3_host_prog = '/usr/bin/python3.8'
+"let g:loaded_python_provider = 0
 nnoremap d; d$
 nnoremap ,; :vertical resize-5<ESC>
 nnoremap ,l :vertical resize+5<ESC>
@@ -173,5 +174,4 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
-
 
